@@ -60,4 +60,4 @@ Claude was used to help create the initial HTML structure, troubleshoot the dark
 
 ## Author
 
-Abdulrahman Saleh Maashi — ID 20235070, Section 2
+Abdulrahman Saleh Maashi — ID 202356070, Section 2

@@ -14,6 +14,7 @@ This project is a responsive personal portfolio website created for Assignment 1
 - Click-to-enlarge lightbox for project screenshots
 - Responsive layout for desktop, tablet, and mobile screens
 - Accessible labels, alternative image text, and semantic HTML elements
+- Accessible GitHub footer link announces that it opens in a new tab, while `target="_blank"` and `rel="noopener noreferrer"` provide safer external linking
 
 ## Technologies Used
 

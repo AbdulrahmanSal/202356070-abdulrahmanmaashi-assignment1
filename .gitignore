@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Dependencies and build output (not used now, kept for later assignments)
+node_modules/
+dist/
+.cache/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log

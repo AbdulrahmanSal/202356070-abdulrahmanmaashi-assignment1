@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulrahman Saleh Maashi — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Abdulrahman Saleh Maashi, a computer science student building for the web." />
+
+  <!-- Typeface: one family (Manrope) at three weights keeps the page light to load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!--
+    The saved theme is applied before the page paints so the screen never
+    flashes light before switching to dark. This small script must stay inline.
+  -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {
+        /* Private browsing can block storage; the default theme still works. */
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__mark" href="#top">AM</a>
+
+      <ul class="nav__list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- aria-pressed tells screen readers whether dark mode is currently on -->
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span id="theme-toggle-label">Dark</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section id="top" class="hero">
+      <p class="hero__greeting" id="greeting">Hello</p>
+
+      <h1 class="hero__name">Abdulrahman Saleh Maashi</h1>
+
+      <p class="hero__tagline">
+        Computer science student. I build small, fast web things and write down
+        what I learn along the way.
+      </p>
+
+      <div class="hero__actions">
+        <a class="button button--solid" href="#projects">See my projects</a>
+        <a class="button" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <h2 class="section__title">About me</h2>
+
+      <div class="about">
+        <img
+          class="about__photo"
+          src="assets/images/profile.jpg"
+          alt="Profile photo"
+          width="160" height="160" loading="lazy" />
+
+        <div class="about__text">
+          <p>
+            I am a Computer Science student at King Fahd University of
+            Petroleum and Minerals, with hands-on experience in Java, Python,
+            and software engineering through academic and independent
+            projects. I enjoy building things end to end — from requirements
+            and design through working code.
+          </p>
+          <p>
+            My work spans desktop applications, data analysis, and digital
+            hardware design. This site is part of that ongoing habit of
+            building, testing, and documenting what I learn along the way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__lead">Click a screenshot to view it full size.</p>
+
+      <div class="projects">
+        <article class="project">
+          <img class="project__image" src="assets/images/project-1.png"
+               alt="KFUPM Hotel Booking desktop app showing an available room for a searched date" loading="lazy" />
+          <h3 class="project__title">KFUPM Hotel Reservation System</h3>
+          <p class="project__text">
+            A multi-screen JavaFX desktop application supporting room
+            reservations, guest registration, and administrative approval
+            workflows, with file-based persistence for guest records across
+            sessions.
+          </p>
+          <ul class="project__tags">
+            <li>Java</li><li>JavaFX</li><li>File I/O</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <img class="project__image" src="assets/images/project-2.png"
+               alt="Scatter plot comparing actual and predicted house prices from the Lasso model" loading="lazy" />
+          <h3 class="project__title">House Price Prediction Model</h3>
+          <p class="project__text">
+            Built with a four-member team: cleaned, encoded, and prepared a
+            residential housing dataset for regression modelling, then
+            compared Linear, Ridge, and Lasso models to identify which
+            features drive price most strongly.
+          </p>
+          <ul class="project__tags">
+            <li>Python</li><li>pandas</li><li>scikit-learn</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <img class="project__image" src="assets/images/project-3.png"
+               alt="Simulation waveform showing the serving counter and waiting countdown" loading="lazy" />
+          <h3 class="project__title">Digital Queue Management System</h3>
+          <p class="project__text">
+            Modular Verilog counters, debounce logic, and pulse generators
+            drive a ticket-issuing and customer-serving system, integrated
+            with a BCD converter and seven-segment display and validated
+            through simulation and hardware testing on a Nexys A7 FPGA.
+          </p>
+          <ul class="project__tags">
+            <li>Verilog</li><li>FPGA</li><li>Digital Design</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+
+      <ul class="skills">
+        <li class="skill">
+          <span class="skill__name">Java</span>
+          <span class="skill__note">JavaFX desktop applications, object-oriented design</span>
+        </li>
+        <li class="skill">
+          <span class="skill__name">Python</span>
+          <span class="skill__note">pandas, scikit-learn, data analysis and modelling</span>
+        </li>
+        <li class="skill">
+          <span class="skill__name">Verilog</span>
+          <span class="skill__note">Digital logic design, FPGA simulation and testing</span>
+        </li>
+        <li class="skill">
+          <span class="skill__name">C &amp; Arduino</span>
+          <span class="skill__note">Embedded systems, sensor-driven microcontroller projects</span>
+        </li>
+        <li class="skill">
+          <span class="skill__name">SQL</span>
+          <span class="skill__note">Relational databases</span>
+        </li>
+        <li class="skill">
+          <span class="skill__name">Git &amp; GitHub</span>
+          <span class="skill__note">Version control, collaborative team projects</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <h2 class="section__title">Contact</h2>
+      <p class="section__lead">
+        Send a message and I will reply by email. Nothing is stored — this form
+        is validated in the browser only.
+      </p>
+
+      <!-- novalidate turns off native bubbles so script.js can show its own messages -->
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name"
+                 aria-describedby="name-error" required />
+          <p class="field__error" id="name-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 aria-describedby="email-error" required />
+          <p class="field__error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"
+                    aria-describedby="message-error" required></textarea>
+          <p class="field__error" id="message-error" role="alert"></p>
+        </div>
+
+        <button class="button button--solid" type="submit">Send message</button>
+
+        <!-- Filled in by script.js after a valid submission -->
+        <p class="form__status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for Assignment 1. Last updated <time datetime="2026-09">September 2026</time>.</p>
+    <p>
+      <a href="https://github.com/AbdulrahmanSal">GitHub</a>
+      <a href="mailto:s202356070@kfupm.edu.sa">Email</a>
+    </p>
+  </footer>
+
+  <!-- Full-size view for project screenshots, opened by js/script.js -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox__close" type="button" aria-label="Close image">&times;</button>
+    <img class="lightbox__image" id="lightbox-image" src="" alt="" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
